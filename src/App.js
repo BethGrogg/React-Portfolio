@@ -13,7 +13,7 @@ function App() {
         <div class="container clearfix">
           
           
-            <Image class="profile-image img-fluid float-left roundedCircle" src="images/Beth_profile_pic.jpg"
+            <Image class="profile-image img-fluid float-left" src="images/Beth_profile_pic.jpg"
                 alt="Bethany Grogg" roundedCircle />
                
                
