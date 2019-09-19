@@ -2,47 +2,61 @@ import React from 'react';
 import './App.css';
 import Image from 'react-bootstrap/Image';
 import Jumbotron from 'react-bootstrap/Jumbotron';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faLinkedin, faGithub} from '@fortawesome/fontawesome-free-brands';
+import {faPaperPlane} from '@fortawesome/free-solid-svg-icons';
 
 
 
 function App() {
   return (
     <div className="App">
-      <Jumbotron class="header">
-        <div class="container clearfix">
-          
-          
-            <Image class="profile-image img-fluid float-left" src="images/Beth_profile_pic.jpg"
-                alt="Bethany Grogg" roundedCircle />
-               
-               
-            
-                <h1 class="name">Bethany Grogg</h1>
-                <h2 class="desc">Web Developer</h2>
-                <ul class="social list-inline">
+      <Jumbotron className="header">
+        <Container>
+          <Row fluid>
+            <Col>
+              <Image className="profile-image" src="images/Beth_profile_pic.jpg"
+                alt="Bethany Grogg" />
+            </Col>
 
-                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/bethany-grogg-809093b0/"
-                            target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li class="list-inline-item"><a href="https://github.com/BethGrogg" target="_blank"><i
-                                class="fab fa-github-alt"></i></a></li>
+            <Col className="profile-content">  
+              <h1 className="name">Bethany Grogg</h1>
+              <h2 className="desc">Web Developer</h2>
 
-                </ul>
-           
-            <a class="btn btn-cta-primary float-right" href="mailto:Bethany.Grogg@gmail.com" target="_blank"><i
-                    class="fas fa-paper-plane"></i> Contact Me</a>
-        </div>
+              <Row fluid className="social list-inline">
+                <Col className="list-inline-item">
+                  <a href="https://www.linkedin.com/in/bethany-grogg-809093b0/">
+                  <FontAwesomeIcon className='font-awesome' icon={faLinkedin} style={{ color: '#778492' }} /></a>
+                </Col>
+                <Col className="list-inline-item">
+                  <a href="https://github.com/BethGrogg">
+                  <FontAwesomeIcon className='font-awesome' icon={faGithub} style={{ color: '#778492' }}  /></a>
+                </Col>
+              </Row>
+            </Col>
+
+            <Col>
+              <a className="btn btn-cta-primary pull-right" href="mailto:Bethany.Grogg@gmail.com">
+              <FontAwesomeIcon className ='font-awesome' icon={faPaperPlane} /> Contact Me</a>
+            </Col>
+
+          </Row>
+        </Container>
         
     </Jumbotron>
    
       
-<div class="container sections-wrapper">
-        <div class="row">
-            <div class="primary col-lg-8 col-12">
-                <section class="about section">
-                    <div class="section-inner">
-                        <h2 class="heading">About Me</h2>
-                        <div class="content">
+<Container className="container sections-wrapper">
+        <Row>
+            <Col size="lg-8" className="primary">
+                <section className="about section">
+                    <div className="section-inner">
+                        <h2 className="heading">About Me</h2>
+                        <div className="content">
                             <p>I am a Web Developer with a background in Java, SQL, HTML, CSS, and JavaScript.  My first experience with these programs was 18 years ago while I was in a training program at Liberty Mutual.  Here I was able to build a system from scratch while spearheading the project and working with other individuals to reach a common goal of creating a positive interactive experience.
                             </p>
                             <p>
@@ -59,89 +73,81 @@ function App() {
                 </section>
                 
 
-                <section class="latest section">
-                    <div class="section-inner">
-                        <h2 class="heading">Latest Projects</h2>
-                        <div class="content">
+                <section className="latest section">
+                    <div className="section-inner">
+                        <h2 className="heading">Latest Projects</h2>
+                        <div className="content">
 
-                            <div class="item featured text-center">
-                                <h3 class="title"><a href="https://cryptic-harbor-20380.herokuapp.com/"
-                                        target="_blank">Swarm</a></h3>
-                                <p class="summary">Standup With A Remote Motif</p>
-                                <div class="featured-image has-ribbon">
-                                    <a href="https://cryptic-harbor-20380.herokuapp.com/" target="_blank">
-                                        <img class="img-fluid project-image" src="images/Swarm.png"
+                            <div className="item featured text-center">
+                                <h3 className="title"><a href="https://cryptic-harbor-20380.herokuapp.com/"
+                                        target="_blank" rel="noopener noreferrer">Swarm</a></h3>
+                                <p className="summary">Standup With A Remote Motif</p>
+                                <div className="featured-image has-ribbon">
+                                    <a href="https://cryptic-harbor-20380.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+                                        <img className="img-fluid project-image" src="images/Swarm.png"
                                             alt="Swarm" />
                                     </a>
-                                    <div class="ribbon">
+                                    <div className="ribbon">
                                         <div class="text">New</div>
                                     </div>
                                 </div>
 
-                                <div class="desc text-left">
+                                <div className="desc text-left">
                                     <p>Our goal is to help relieve the struggles of working with members from long distances while still following agile practices.
                                         We want to help solve the remote daily standup conundrum!</p>
                                     <p><a href="https://github.com/shimmer10/swarm"
-                                            target="_blank">https://github.com/shimmer10/swarm</a></p>
+                                            target="_blank" rel="noopener noreferrer">https://github.com/shimmer10/swarm</a></p>
                                     <p><a href="https://cryptic-harbor-20380.herokuapp.com/"
-                                            target="_blank">https://cryptic-harbor-20380.herokuapp.com/</a></p>
+                                            target="_blank" rel="noopener noreferrer">https://cryptic-harbor-20380.herokuapp.com/</a></p>
                                 </div>
                                 
 
                             </div>
                             
-                            <hr class="divider" />
+                            <hr className="divider" />
 
-    <Carousel>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="images/Localmotion.png"
-          alt="Localmotion"
-        />
-        <Carousel.Caption>
-          <h3>Localmotion</h3>
-          <p>This web application is designed to be a community outreach program, directed
-                                        towards 55+ communities in particular. The idea is to give the user an easy
-                                        place to learn about group activities in their community and to sign up for
-                                        those activities. This application utilitizes Google Calendar API. It was
-                                        designed using Semantic UI and uses Express and MySQL.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="images/Localmotion.png"
-          alt="Localmotion"
-        />
+ 
+                            <Carousel>
+  <Carousel.Item>
+    <img
+      className="d-block w-100" width={300} height={100}
+      src="images/Localmotion.png"
+      alt="Localmotion"
+    />
+    
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100" width={300} height={100}
+      src="images/clicky-game.png"
+      alt="Third slide"
+    />
+    <Carousel.Caption>
+        <h4>Testing</h4>
+    </Carousel.Caption>
+    
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100" width={300} height={100}
+      src="images/Friends_Trivia.png"
+      alt="Third slide"
+    />
 
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=20232a"
-          alt="Third slide"
-        />
+    
+  </Carousel.Item>
+</Carousel>                
+  
 
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
 
-                            <div class="item row">
-                                <a class="col-md-4 col-12" href="https://localmotion-two.herokuapp.com/"
-                                    target="_blank">
-                                    <img class="img-fluid project-image" src="assets/images/Localmotion.png" alt="Localmotion" />
+                            <div className="item row">
+                                <a className="col-md-4 col-12" href="https://localmotion-two.herokuapp.com/"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <img className="img-fluid project-image" src="images/Localmotion.png" alt="Localmotion" />
                                 </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://localmotion-two.herokuapp.com/"
-                                            target="_blank">Localmotion</a></h3>
+                                <div className="desc col-md-8 col-12">
+                                    <h3 className="title"><a href="https://localmotion-two.herokuapp.com/"
+                                            target="_blank" rel="noopener noreferrer">Localmotion</a></h3>
                                     <p>This web application is designed to be a community outreach program, directed
                                         towards 55+ communities in particular. The idea is to give the user an easy
                                         place to learn about group activities in their community and to sign up for
@@ -149,91 +155,93 @@ function App() {
                                         designed using Semantic UI and uses Express and MySQL.</p>
                                     <p class="mb-2"></p>
                                     <p><a href="https://github.com/rcreveling/project-two"
-                                            target="_blank">https://github.com/rcreveling/project-two</a>
-                                        
+                                            target="_blank" rel="noopener noreferrer">https://github.com/rcreveling/project-two</a>
+                                      </p><p>  
                                         <a href="https://localmotion-two.herokuapp.com/"
-                                            target="_blank">https://localmotion-two.herokuapp.com/</a></p>
+                                            target="_blank" rel="noopener noreferrer">https://localmotion-two.herokuapp.com/</a></p>
                                 </div>
                                
                             </div>
                             
 
-                            <div class="item row">
-                                <a class="col-md-4 col-12" href="https://bethgrogg.github.io/clicky-game/"
-                                    target="_blank">
-                                    <img class="img-fluid project-image" src="assets/images/clicky-game.png" alt="Clicky-game" />
+                            <div className="item row">
+                                <a className="col-md-4 col-12" href="https://bethgrogg.github.io/clicky-game/"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <img className="img-fluid project-image" src="images/clicky-game.png" alt="Clicky-game" />
                                 </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://bethgrogg.github.io/clicky-game/"
-                                            target="_blank">Clicky Game</a></h3>
+                                <div className="desc col-md-8 col-12">
+                                    <h3 className="title"><a href="https://bethgrogg.github.io/clicky-game/"
+                                            target="_blank" rel="noopener noreferrer">Clicky Game</a></h3>
                                             <p>Try not to click the same image twice!  A react application.</p>
-                                    <p class="mb-2"></p>
+                                    <p className="mb-2"></p>
                                     <p><a href="https://github.com/BethGrogg/clicky-game"
-                                            target="_blank">https://github.com/BethGrogg/clicky-game</a>
-                                        
+                                            target="_blank" rel="noopener noreferrer">https://github.com/BethGrogg/clicky-game</a>
+                                       </p><p> 
                                         <a href="https://bethgrogg.github.io/clicky-game/"
-                                            target="_blank">https://bethgrogg.github.io/clicky-game/</a></p>
+                                            target="_blank" rel="noopener noreferrer">https://bethgrogg.github.io/clicky-game/</a></p>
                                 </div>
                                
                             </div>
                             
 
                             
-                            <div class="item row">
-                                <a class="col-md-4 col-12" href="https://boxing-celsius-93498.herokuapp.com/"
-                                    target="_blank">
-                                    <img class="img-fluid project-image" src="assets/images/Burger.png" alt="Burger" />
+                            <div className="item row">
+                                <a className="col-md-4 col-12" href="https://boxing-celsius-93498.herokuapp.com/"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <img className="img-fluid project-image" src="images/Burger.png" alt="Burger" />
                                 </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://boxing-celsius-93498.herokuapp.com/"
-                                            target="_blank">Burger</a></h3>
+                                <div className="desc col-md-8 col-12">
+                                    <h3 className="title"><a href="https://boxing-celsius-93498.herokuapp.com/"
+                                            target="_blank" rel="noopener noreferrer">Burger</a></h3>
                                     <p>The app is designed to allow the user to click on a link to "devour" a burger or they can use an input field and button to add a new burger to the list.  The app utilizes html, css, bootstrap, handlebars, mysql, express and node.</p>
-                                    <p class="mb-2"></p>
+                                    <p className="mb-2"></p>
                                     <p><a href="https://github.com/BethGrogg/burger"
-                                            target="_blank">https://github.com/BethGrogg/burger</a>
-                                        
+                                            target="_blank" rel="noopener noreferrer">https://github.com/BethGrogg/burger</a>
+                                     </p><p>   
                                         <a href="https://boxing-celsius-93498.herokuapp.com/"
-                                            target="_blank">https://boxing-celsius-93498.herokuapp.com/</a></p>
+                                            target="_blank" rel="noopener noreferrer">https://boxing-celsius-93498.herokuapp.com/</a></p>
                                 </div>
                                
                             </div>
                             
 
-                            <div class="item row">
-                                <a class="col-md-4 col-12" href="https://rcreveling.github.io/project-one/"
-                                    target="_blank">
-                                    <img class="img-fluid project-image" src="assets/images/Project 1.png"
+                            <div className="item row">
+                                <a className="col-md-4 col-12" href="https://rcreveling.github.io/project-one/"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <img className="img-fluid project-image" src="images/Project 1.png"
                                         alt="2020 Election" />
                                 </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://rcreveling.github.io/project-one/"
-                                            target="_blank">2020 Election</a></h3>
+                                <div className="desc col-md-8 col-12">
+                                    <h3 className="title"><a href="https://rcreveling.github.io/project-one/"
+                                            target="_blank" rel="noopener noreferrer">2020 Election</a></h3>
                                     <p>An application designed to give users up-to-date, unbiased information about the 2020 election.</p>
-                                    <p class="mb-2"></p>
+                                    <p className="mb-2"></p>
                                     <p><a href="https://github.com/rcreveling/project-one"
-                                            target="_blank">https://github.com/rcreveling/project-one</a></p>
-                                        <break></break>
+                                            target="_blank" rel="noopener noreferrer">https://github.com/rcreveling/project-one</a></p>
+                                       
+                                        <p><a href="https://rcreveling.github.io/project-one/"
+                                            target="_blank" rel="noopener noreferrer">https://rcreveling.github.io/project-one/</a></p>    
                                 </div>
                                 
                             </div>
 
-                            <div class="item row">
-                                <a class="col-md-4 col-12" href="https://bethgrogg.github.io/TriviaGame/"
-                                    target="_blank">
-                                    <img class="img-fluid project-image" src="assets/images/Friends_Trivia.png"
+                            <div className="item row">
+                                <a className="col-md-4 col-12" href="https://bethgrogg.github.io/TriviaGame/"
+                                    target="_blank" rel="noopener noreferrer">
+                                      <img className="img-fluid project-image" src="images/Friends_Trivia.png"
                                         alt="Friends Trivia Game" />
                                 </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://bethgrogg.github.io/TriviaGame/"
-                                            target="_blank">Friends Trivia Game</a></h3>
+                                <div className="desc col-md-8 col-12">
+                                    <h3 className="title"><a href="https://bethgrogg.github.io/TriviaGame/"
+                                            target="_blank" rel="noopener noreferrer">Friends Trivia Game</a></h3>
                                     <p>This is a trivia game based on the television show "Friends". This is a timed game where the user has 5 seconds to answer the question.</p>
-                                    <p class="mb-2"></p>
+                                    <p className="mb-2"></p>
                                     <p><a href="https://github.com/BethGrogg/TriviaGame"
-                                            target="_blank">https://github.com/BethGrogg/TriviaGame</a>
-                                        <break></break>
-                                        <a href="https://bethgrogg.github.io/TriviaGame/"
-                                            target="_blank">https://bethgrogg.github.io/TriviaGame/</a>
-                                    </p>
+                                            target="_blank" rel="noopener noreferrer">https://github.com/BethGrogg/TriviaGame</a></p>
+                                       
+                                        <p><a href="https://bethgrogg.github.io/TriviaGame/"
+                                            target="_blank" rel="noopener noreferrer">https://bethgrogg.github.io/TriviaGame/</a></p>
+                                    
                                 </div>
                                 
                             </div>
@@ -247,23 +255,25 @@ function App() {
                
 
 
-                </div>
+                </Col>
             
-            <div class="secondary col-lg-4 col-12">
-                <aside class="info aside section">
-                    <div class="section-inner">
-                        <h2 class="heading sr-only">Basic Information</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>South
-                                    Berwick, ME</li>
-                                <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span><a
-                                        href="mailto:Bethany.Grogg@gmail.com"
-                                        target="_blank">Bethany.Grogg@gmail.com</a></li>
-                                <li><i class="fas fa-phone"></i><span class="sr-only">Phone:</span>207-384-4156</li>
-                                <li><i class="fas fa-file-pdf"></i><span class="sr-only">Resume:</span><a
-                                        href="assets/BethanyGroggResume.pdf" target="_blank">Resume</a></li>
-                            </ul>
+            <Col size="lg-8" className="secondary">
+                <aside className="info aside section">
+                    <div className="section-inner">
+                        <h2 className="heading sr-only">Basic Information</h2>
+                        <div className="content">
+                            <div className="list-unstyled">
+                                <div><i className="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>South
+                                    Berwick, ME</div>
+                                    <br />
+                                <div><i className="fas fa-envelope"></i><span class="sr-only">Email:</span><a
+                                        href="mailto:Bethany.Grogg@gmail.com" target="_blank" rel="noopener noreferrer">Bethany.Grogg@gmail.com</a></div>
+                                    <br />    
+                                <div><i className="fas fa-phone"></i><span class="sr-only">Phone:</span>207-384-4156</div>
+                                    <br />
+                                <div><i className="fas fa-file-pdf"></i><span class="sr-only">Resume:</span><a
+                                        href="assets/BethanyGroggResume.pdf" target="_blank">Resume</a></div>
+                            </div>
                         </div>
                         
                     </div>
@@ -275,14 +285,16 @@ function App() {
                 
 
                            
-                        </div>
+                        </Col>
                        
-                    </div>
+                    </Row>
                     
              
                 
 
-            </div>
+            </Container>
+            
+            
             </div>
   );
 };
