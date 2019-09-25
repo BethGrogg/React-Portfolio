@@ -17,33 +17,48 @@ function App() {
     <div className="App">
       <Jumbotron className="header">
         <Container>
-          <Row fluid>
-            <Col>
+          <Row fluid className="main-info">
+            <Col className="pull-left">
               <Image className="profile-image" src="images/Beth_profile_pic.jpg"
                 alt="Bethany Grogg" />
-            </Col>
+           </Col>
 
             <Col className="profile-content">  
               <h1 className="name">Bethany Grogg</h1>
               <h2 className="desc">Web Developer</h2>
-
-              <Row fluid className="social list-inline">
-                <Col className="list-inline-item">
-                  <a href="https://www.linkedin.com/in/bethany-grogg-809093b0/">
+              <div className="social"><a href="https://www.linkedin.com/in/bethany-grogg-809093b0/ "target="_blank">
                   <FontAwesomeIcon className='font-awesome' icon={faLinkedin} style={{ color: '#778492' }} /></a>
-                </Col>
-                <Col className="list-inline-item">
-                  <a href="https://github.com/BethGrogg">
+                  
+                  <a href="https://github.com/BethGrogg" target="_blank">
                   <FontAwesomeIcon className='font-awesome' icon={faGithub} style={{ color: '#778492' }}  /></a>
-                </Col>
-              </Row>
+              </div>
+              
+                 
             </Col>
-
-            <Col>
-              <a className="btn btn-cta-primary pull-right" href="mailto:Bethany.Grogg@gmail.com">
-              <FontAwesomeIcon className ='font-awesome' icon={faPaperPlane} /> Contact Me</a>
-            </Col>
-
+            <Col className="secondary">
+                
+                        <div className="content pull-right">
+                            <div className="list-unstyled">
+                                <div><i className="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>South
+                                    Berwick, ME</div>
+                                    <br />
+                                <div><i className="fas fa-envelope"></i><span class="sr-only">Email:</span><a
+                                        href="mailto:Bethany.Grogg@gmail.com" target="_blank" rel="noopener noreferrer">Bethany.Grogg@gmail.com</a></div>
+                                    <br />    
+                                <div><i className="fas fa-phone"></i><span class="sr-only">Phone:</span>207-384-4156</div>
+                                    <br />
+                                <div><i className="fas fa-file-pdf"></i><span class="sr-only">Resume:</span><a
+                                        href="assets/BethanyGroggResume.pdf" target="_blank">Resume</a></div>
+                                    <br />
+                                        
+            
+              
+                            </div>
+                        </div>
+                   
+                           
+                        </Col>
+                       
           </Row>
         </Container>
         
@@ -78,65 +93,28 @@ function App() {
                         <h2 className="heading">Latest Projects</h2>
                         <div className="content">
 
-                            <div className="item featured text-center">
-                                <h3 className="title"><a href="https://cryptic-harbor-20380.herokuapp.com/"
-                                        target="_blank" rel="noopener noreferrer">Swarm</a></h3>
-                                <p className="summary">Standup With A Remote Motif</p>
-                                <div className="featured-image has-ribbon">
-                                    <a href="https://cryptic-harbor-20380.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-                                        <img className="img-fluid project-image" src="images/Swarm.png"
-                                            alt="Swarm" />
-                                    </a>
-                                    <div className="ribbon">
-                                        <div class="text">New</div>
-                                    </div>
-                                </div>
-
-                                <div className="desc text-left">
+                            <div className="item row">
+                                <a className="col-md-4 col-12" href="https://cryptic-harbor-20380.herokuapp.com/"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <img className="img-fluid project-image" src="images/Swarm.png" alt="Swarm" />
+                                </a>
+                                <div className="desc col-md-8 col-12">
+                                    <h3 className="title"><a href="https://cryptic-harbor-20380.herokuapp.com/"
+                                            target="_blank" rel="noopener noreferrer">Swarm</a></h3>
                                     <p>Our goal is to help relieve the struggles of working with members from long distances while still following agile practices.
                                         We want to help solve the remote daily standup conundrum!</p>
+                                    <p class="mb-2"></p>
                                     <p><a href="https://github.com/shimmer10/swarm"
-                                            target="_blank" rel="noopener noreferrer">https://github.com/shimmer10/swarm</a></p>
-                                    <p><a href="https://cryptic-harbor-20380.herokuapp.com/"
+                                            target="_blank" rel="noopener noreferrer">https://github.com/shimmer10/swarm</a>
+                                      </p><p>  
+                                        <a href="https://cryptic-harbor-20380.herokuapp.com/"
                                             target="_blank" rel="noopener noreferrer">https://cryptic-harbor-20380.herokuapp.com/</a></p>
                                 </div>
-                                
-
+                               
                             </div>
                             
-                            <hr className="divider" />
-
  
-                            <Carousel>
-  <Carousel.Item>
-    <img
-      className="d-block w-100" width={300} height={100}
-      src="images/Localmotion.png"
-      alt="Localmotion"
-    />
-    
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100" width={300} height={100}
-      src="images/clicky-game.png"
-      alt="Third slide"
-    />
-    <Carousel.Caption>
-        <h4>Testing</h4>
-    </Carousel.Caption>
-    
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100" width={300} height={100}
-      src="images/Friends_Trivia.png"
-      alt="Third slide"
-    />
-
-    
-  </Carousel.Item>
-</Carousel>                
+                        
   
 
 
@@ -257,36 +235,7 @@ function App() {
 
                 </Col>
             
-            <Col size="lg-8" className="secondary">
-                <aside className="info aside section">
-                    <div className="section-inner">
-                        <h2 className="heading sr-only">Basic Information</h2>
-                        <div className="content">
-                            <div className="list-unstyled">
-                                <div><i className="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>South
-                                    Berwick, ME</div>
-                                    <br />
-                                <div><i className="fas fa-envelope"></i><span class="sr-only">Email:</span><a
-                                        href="mailto:Bethany.Grogg@gmail.com" target="_blank" rel="noopener noreferrer">Bethany.Grogg@gmail.com</a></div>
-                                    <br />    
-                                <div><i className="fas fa-phone"></i><span class="sr-only">Phone:</span>207-384-4156</div>
-                                    <br />
-                                <div><i className="fas fa-file-pdf"></i><span class="sr-only">Resume:</span><a
-                                        href="assets/BethanyGroggResume.pdf" target="_blank">Resume</a></div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    
-                </aside>
-                
-
-
-                
-
-                           
-                        </Col>
-                       
+           
                     </Row>
                     
              
