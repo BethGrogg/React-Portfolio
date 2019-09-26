@@ -5,10 +5,10 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Carousel from 'react-bootstrap/Carousel';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faLinkedin, faGithub} from '@fortawesome/fontawesome-free-brands';
-import {faPaperPlane} from '@fortawesome/free-solid-svg-icons';
+import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
+
 
 
 
@@ -18,46 +18,43 @@ function App() {
       <Jumbotron className="header">
         <Container>
           <Row fluid className="main-info">
-            <Col className="pull-left">
+            <Col md="2" className="pull-left">
               <Image className="profile-image" src="images/Beth_profile_pic.jpg"
                 alt="Bethany Grogg" />
            </Col>
 
-            <Col className="profile-content">  
+            <Col md="7" className="profile-content">  
               <h1 className="name">Bethany Grogg</h1>
               <h2 className="desc">Web Developer</h2>
-              <div className="social"><a href="https://www.linkedin.com/in/bethany-grogg-809093b0/ "target="_blank">
-                  <FontAwesomeIcon className='font-awesome' icon={faLinkedin} style={{ color: '#778492' }} /></a>
-                  
-                  <a href="https://github.com/BethGrogg" target="_blank">
-                  <FontAwesomeIcon className='font-awesome' icon={faGithub} style={{ color: '#778492' }}  /></a>
-              </div>
+              <br />
+              <h6>“Design is not just what it looks like and feels like. Design is how it works.” –Steve Jobs</h6>
+              
               
                  
             </Col>
-            <Col className="secondary">
-                
-                        <div className="content pull-right">
-                            <div className="list-unstyled">
-                                <div><i className="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>South
+            <Col md="3" className="pull-right contact-info">
+                                <br />
+                                <h4>Contact Information</h4>
+                            
+                                <div><i className="fas fa-map-marker-alt"></i><span class="sr-only"> Location:</span>&nbsp;&nbsp;South
                                     Berwick, ME</div>
-                                    <br />
-                                <div><i className="fas fa-envelope"></i><span class="sr-only">Email:</span><a
-                                        href="mailto:Bethany.Grogg@gmail.com" target="_blank" rel="noopener noreferrer">Bethany.Grogg@gmail.com</a></div>
-                                    <br />    
-                                <div><i className="fas fa-phone"></i><span class="sr-only">Phone:</span>207-384-4156</div>
-                                    <br />
-                                <div><i className="fas fa-file-pdf"></i><span class="sr-only">Resume:</span><a
-                                        href="assets/BethanyGroggResume.pdf" target="_blank">Resume</a></div>
-                                    <br />
-                                        
-            
-              
-                            </div>
-                        </div>
-                   
+                                    
+                                <div><i className="fas fa-phone"></i><span class="sr-only"> Phone:</span>&nbsp;207-384-4156</div>
+                                    
+                                <div><i className="fas fa-file-pdf"></i><span class="sr-only"> Resume:</span><a
+                                        href="assets/BethanyGroggResume.pdf" target="_blank">&nbsp;&nbsp;Resume</a></div>
                            
-                        </Col>
+                           <div><a href="mailto:Bethany.Grogg@gmail.com" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon className='font-awesome' icon={faEnvelope} style={{ color: '#434343' }} /></a>
+
+                           <a href="https://www.linkedin.com/in/bethany-grogg-809093b0/" rel="noopener noreferrer "target="_blank">
+                  <FontAwesomeIcon className='font-awesome' icon={faLinkedin} style={{ color: '#434343' }} /></a>
+                  
+                  <a href="https://github.com/BethGrogg" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon className='font-awesome' icon={faGithub} style={{ color: '#434343' }}  /></a>
+              </div>
+                           
+            </Col>
                        
           </Row>
         </Container>
