@@ -11,9 +11,9 @@ import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 
 
 
-
 function App() {
   return (
+
     <div className="App">
       <Jumbotron className="header">
         <Container>
@@ -24,35 +24,38 @@ function App() {
            </Col>
 
             <Col md="7" className="profile-content">  
+              
               <h1 className="name">Bethany Grogg</h1>
               <h2 className="desc">Web Developer</h2>
               <br />
               <h6>“Design is not just what it looks like and feels like. Design is how it works.” –Steve Jobs</h6>
-              
-              
                  
             </Col>
-            <Col md="3" className="pull-right contact-info">
-                                <br />
-                                <h4>Contact Information</h4>
-                            
-                                <div><i className="fas fa-map-marker-alt"></i><span class="sr-only"> Location:</span>&nbsp;&nbsp;South
-                                    Berwick, ME</div>
-                                    
-                                <div><i className="fas fa-phone"></i><span class="sr-only"> Phone:</span>&nbsp;207-384-4156</div>
-                                    
-                                <div><i className="fas fa-file-pdf"></i><span class="sr-only"> Resume:</span><a
-                                        href="assets/BethanyGroggResume.pdf" target="_blank">&nbsp;&nbsp;Resume</a></div>
-                           
-                           <div><a href="mailto:Bethany.Grogg@gmail.com" target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon className='font-awesome' icon={faEnvelope} style={{ color: '#434343' }} /></a>
 
-                           <a href="https://www.linkedin.com/in/bethany-grogg-809093b0/" rel="noopener noreferrer "target="_blank">
-                  <FontAwesomeIcon className='font-awesome' icon={faLinkedin} style={{ color: '#434343' }} /></a>
+            <Col md="3" className="pull-right contact-info">
+                
+                <br />
+                                
+                <h4>Contact Information</h4>
+                            
+                <div><i className="fas fa-map-marker-alt"></i><span class="sr-only"> Location:</span>
+                            &nbsp;&nbsp;South Berwick, ME</div>
+                                    
+                <div><i className="fas fa-phone"></i><span class="sr-only"> Phone:</span>&nbsp;207-384-4156</div>
+                                    
+                <div><i className="fas fa-file-pdf"></i><span class="sr-only"> Resume:</span><a
+                            href="assets/BethanyGroggResume.pdf" target="_blank">&nbsp;&nbsp;Resume</a></div>
+                           
+                <div>
+                    <a href="mailto:Bethany.Grogg@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon className='font-awesome' icon={faEnvelope} style={{ color: '#434343' }} /></a>
+
+                    <a href="https://www.linkedin.com/in/bethany-grogg-809093b0/" rel="noopener noreferrer "target="_blank">
+                        <FontAwesomeIcon className='font-awesome' icon={faLinkedin} style={{ color: '#434343' }} /></a>
                   
-                  <a href="https://github.com/BethGrogg" target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon className='font-awesome' icon={faGithub} style={{ color: '#434343' }}  /></a>
-              </div>
+                    <a href="https://github.com/BethGrogg" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon className='font-awesome' icon={faGithub} style={{ color: '#434343' }}  /></a>
+                </div>
                            
             </Col>
                        
@@ -68,6 +71,7 @@ function App() {
                 <section className="about section">
                     <div className="section-inner">
                         <h2 className="heading">About Me</h2>
+
                         <div className="content">
                             <p>I am a Web Developer with a background in Java, SQL, HTML, CSS, and JavaScript.  My first experience with these programs was 18 years ago while I was in a training program at Liberty Mutual.  Here I was able to build a system from scratch while spearheading the project and working with other individuals to reach a common goal of creating a positive interactive experience.
                             </p>
@@ -88,6 +92,7 @@ function App() {
                 <section className="latest section">
                     <div className="section-inner">
                         <h2 className="heading">Latest Projects</h2>
+
                         <div className="content">
 
                             <div className="item row">
@@ -110,10 +115,6 @@ function App() {
                                
                             </div>
                             
- 
-                        
-  
-
 
                             <div className="item row">
                                 <a className="col-md-4 col-12" href="https://localmotion-two.herokuapp.com/"
@@ -230,18 +231,18 @@ function App() {
                
 
 
-                </Col>
+            </Col>
             
            
-                    </Row>
+        </Row>
                     
              
                 
 
-            </Container>
+    </Container>
             
             
-            </div>
+    </div>
   );
 };
           
