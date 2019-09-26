@@ -44,10 +44,10 @@ function App() {
                 <div><i className="fas fa-phone"></i><span class="sr-only"> Phone:</span>&nbsp;207-384-4156</div>
                                     
                 <div><i className="fas fa-file-pdf"></i><span class="sr-only"> Resume:</span><a
-                            href="assets/BethanyGroggResume.pdf" target="_blank">&nbsp;&nbsp;Resume</a></div>
+                            href="BethanyGroggResume.pdf" target="_blank">&nbsp;&nbsp;Resume</a></div>
                            
                 <div>
-                    <a href="mailto:Bethany.Grogg@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <a href="mailto:Bethany.Grogg@gmail.com">
                         <FontAwesomeIcon className='font-awesome' icon={faEnvelope} style={{ color: '#434343' }} /></a>
 
                     <a href="https://www.linkedin.com/in/bethany-grogg-809093b0/" rel="noopener noreferrer "target="_blank">
